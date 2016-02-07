@@ -1,14 +1,16 @@
 <?php
 class ContactPage extends Page {
 	static $db = array(
+		'MailFrom' => 'Varchar(255)',
 		'MailTo' => 'Varchar(255)',
 		'SubmitText' => 'Text'
 	);
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.OnSubmission', new TextField('MailTo', 'Email submissions to'));
-		$fields->addFieldToTab('Root.OnSubmission', new TextareaField('SubmitText', 'Text on Submission'));
+		$fields->addFieldToTab('Root.ContactForm', new TextField('MailTo', 'Email enquiries to'));
+		$fields->addFieldToTab('Root.ContactForm', new TextField('MailFrom', 'Email enquiries from'));
+		$fields->addFieldToTab('Root.ContactForm', new TextareaField('SubmitText', 'Message when email submitted'));
 	
 		return $fields; 
 	}
@@ -55,7 +57,7 @@ class ContactPage_Controller extends Page_Controller {
 
 	function SendContactForm($data, $form) {
 		// Set data
-		$From = $data['Email'];
+		$From = $this->MailFrom;
 		$To = $this->MailTo;
 		$Subject = 'PNRC Website Contact Message';
 		$email = new Email($From, $To, $Subject);
