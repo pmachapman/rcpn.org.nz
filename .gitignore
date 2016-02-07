@@ -28,3 +28,6 @@ _ss_environment.php
 /install-frameworkmissing.html
 /README.md
 /web.config
+
+# Ignore temporary files
+Thumbs.db
