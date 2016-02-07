@@ -5,6 +5,6 @@
 			The following message was submitted to the Reformed Church of Palmerston North website by
 			<a href="mailto:$Email">$Name &lt;$Email&gt;</a>:
 		</p>
-		<p style="font-size:1.4em;color:#222;">$Message</P> 
+		<p style="font-size:1.4em;color:#222;">$Message.forTemplate</P> 
 	</body>
 </html>
