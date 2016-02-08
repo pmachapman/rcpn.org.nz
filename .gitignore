@@ -26,7 +26,6 @@ _ss_environment.php
 /composer.phar
 /index.php
 /install-frameworkmissing.html
-/README.md
 /web.config
 
 # Ignore temporary files
