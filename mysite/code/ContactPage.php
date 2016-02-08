@@ -3,7 +3,8 @@ class ContactPage extends Page {
 	static $db = array(
 		'MailFrom' => 'Varchar(255)',
 		'MailTo' => 'Varchar(255)',
-		'SubmitText' => 'Text'
+		'SubmitText' => 'Text',
+		'Blurb' => 'HTMLText'
 	);
 
 	private static $has_many = array(
@@ -12,6 +13,13 @@ class ContactPage extends Page {
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
+
+		// Add a box to customise the blurb
+		$blurbField = new HtmlEditorField('Blurb', 'Blurb');
+		$blurbField->setRows(2);
+		$fields->addFieldToTab('Root.Main', $blurbField, 'Content');
+
+		// Setup the contact form settings
 		$fields->addFieldToTab('Root.ContactForm', new TextField('MailTo', 'Email enquiries to'));
 		$fields->addFieldToTab('Root.ContactForm', new TextField('MailFrom', 'Email enquiries from'));
 		$fields->addFieldToTab('Root.ContactForm', new TextareaField('SubmitText', 'Message when email submitted'));
@@ -109,7 +117,7 @@ class ContactPage_Controller extends Page_Controller {
 		$email->send();
 
 		// Return to submitted message
-		$this->redirect($this->Link('?success=1'));
+		$this->redirect($this->Link('?success=1#thanks'));
 	}
 
 	function Success()

@@ -164,3 +164,4 @@
 	</div>
 </section>
 <% end_if %>
+<% include Footer %>

@@ -12,3 +12,4 @@
 		</div>
 	</div>
 </section>
+<% include Footer %>

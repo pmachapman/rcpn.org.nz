@@ -23,7 +23,6 @@
 		<div id="page-wrapper">
 			<% include Header %>
 			$Layout
-			<% include Footer %>
 		</div>
 
 		<!-- Scripts -->
