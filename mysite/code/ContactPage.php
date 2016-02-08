@@ -30,15 +30,15 @@ class ContactPage extends Page {
 		));
 
 		// Create a gridfield to hold the submission relationship
-		$studentsField = new GridField(
+		$contactFormEnquiriesGridField = new GridField(
 			'ContactFormSubmissions', // Field name
 			'Contact Form Enquiries', // Field title
 			$this->ContactFormSubmissions(), // List of all related students
 			$config
 		);
 
-		// Create a tab named "Students" and add our field to it
-		$fields->addFieldToTab('Root.Enquiries', $studentsField); 
+		// Create a tab named "Enquiries" and add our field to it
+		$fields->addFieldToTab('Root.Enquiries', $contactFormEnquiriesGridField); 
 
 		return $fields; 
 	}

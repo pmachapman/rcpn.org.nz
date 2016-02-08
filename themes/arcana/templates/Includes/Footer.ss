@@ -2,18 +2,18 @@
 <div id="footer">
 	<div class="container">
 		<div class="row">
+			<% control ShowExternalLinks %>
+			<% if externalLinks %>
 			<section class="6u 6u(narrower) 12u$(mobilep)">
-				<h3>TODO: Other Links</h3>
+				<h3>Other Links</h3>
 				<ul class="links">
-					<li><a href="http://www.sermonaudio.com/source_detail.asp?sourceid=palmerstonnorth" target="_blank">RCPN Sermons</a></li>
-					<li><a href="http://rcnz.org.nz/" target="_blank">Reformed Churches of New Zealand</a></li>
-					<li><a href="http://www.icrconline.com/" target="_blank">ICRC - Conference of Reformed Churches</a></li>
-					<li><a href="http://www.rtc.edu.au/" target="_blank">Reformed Theological College</a></li>
-					<li><a href="http://www.refstudy.org/" target="_blank">Theology and Ministry Training</a></li>
-					<li><a href="http://www.ccel.org/ccel/calvin/commentaries.i.html" target="_blank">Calvin's Commentaries</a></li>
-					<li><a href="http://www.nouthetic.org.nz/" target="_blank">Nouthetic Counsellors of New Zealand</a></li>
+					<% loop externalLinks %>
+					<li><a href="$Website">$Name</a></li>
+					<% end_loop %>
 				</ul>
 			</section>
+			<% end_if %>
+			<% end_control %>
 			<section class="6u 12u(narrower)">
 				<% if $Form %>
 				$Form

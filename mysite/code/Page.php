@@ -38,4 +38,9 @@ class Page_Controller extends ContentController {
 		$get = DataObject::get_one('ContactPage');
 		return new ContactPage_Controller($get);
 	}
+
+	function ShowExternalLinks() {
+		$get = DataObject::get_one('HomePage');
+		return new HomePage_Controller($get);
+	}
 }

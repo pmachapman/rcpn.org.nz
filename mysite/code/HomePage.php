@@ -40,6 +40,10 @@ class HomePage extends Page {
 		'CallToActionButton' => 'Varchar(20)'
 	);
 
+	private static $has_many = array(
+		'ExternalLinks' => 'ExternalLink'
+	);
+
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
@@ -107,6 +111,25 @@ class HomePage extends Page {
 		$fields->addFieldToTab('Root.Main', new TextField('CallToActionButton', 'Button Caption'), 'Metadata');
 		$fields->addFieldToTab('Root.Main', new TreeDropdownField("CallToActionUrlID", "Link Button To Page", "SiteTree"), 'Metadata');
 
+		// Create a default configuration for the new GridField, allowing record deletion
+		$config = GridFieldConfig_RecordEditor::create();
+
+		// Set the names and data for our gridfield columns
+		$config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+			'Name' => 'Website Name',
+			'Address' => 'Website Address'
+		));
+
+		// Create a gridfield to hold the submission relationship
+		$externalLinksGridField = new GridField(
+			'ExternalLinks', // Field name
+			'External Links', // Field title
+			$this->ExternalLinks(), // List of all related students
+			$config
+		);
+
+		// Create a tab named "ExternalLinks" and add our field to it
+		$fields->addFieldToTab('Root.ExternalLinks', $externalLinksGridField); 
 		return $fields;
 	}
 }
