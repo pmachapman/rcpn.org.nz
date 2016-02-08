@@ -1,11 +1,11 @@
 <h3>Get In Touch</h3>
 <form $FormAttributes>
 	<div class="row 50%">
-		<div class="6u 12u(mobilep)">
+		<div class="6u 12u(narrower)">
 			$Fields.dataFieldByName(Name)
 			<span class="message $Fields.dataFieldByName(Name).MessageType">$Fields.dataFieldByName(Name).Message</span>
 		</div>
-		<div class="6u 12u(mobilep)">
+		<div class="6u 12u(narrower)">
 			$Fields.dataFieldByName(Email)
 			<span class="message $Fields.dataFieldByName(Email).MessageType">$Fields.dataFieldByName(Email).Message</span>
 		</div>

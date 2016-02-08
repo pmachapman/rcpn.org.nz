@@ -14,7 +14,7 @@
 			</section>
 			<% end_if %>
 			<% end_control %>
-			<section class="6u 12u(narrower)">
+			<section class="6u 6u(narrower) 12u$(mobilep)">
 				<% if $Form %>
 				$Form
 				<% else_if $CommentsForm %>
