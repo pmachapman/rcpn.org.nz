@@ -1,6 +1,8 @@
 <?php
 class Page extends SiteTree {
 
+	private static $description = 'A standard page with no sidebars';
+
 	private static $db = array(
 	);
 

@@ -1,5 +1,8 @@
 <?php
 class ContactPage extends Page {
+
+	private static $description = 'The contact us page template';
+
 	static $db = array(
 		'MailFrom' => 'Varchar(255)',
 		'MailTo' => 'Varchar(255)',

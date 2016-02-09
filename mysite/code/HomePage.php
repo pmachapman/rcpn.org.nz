@@ -1,6 +1,8 @@
 <?php
 class HomePage extends Page {
 
+	private static $description = 'The home page template';
+
 	private static $icon = 'cms/images/treeicons/home-file.png';
 
 	private static $has_one = array(

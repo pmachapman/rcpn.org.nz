@@ -1,6 +1,8 @@
 <?php
 class TwoSidebarPage extends Page {
 
+	private static $description = 'A standard page with two sidebars';
+
 	private static $has_one = array(
 		'TopSidebarUrl' => 'SiteTree',
 		'BottomSidebarUrl' => 'SiteTree',

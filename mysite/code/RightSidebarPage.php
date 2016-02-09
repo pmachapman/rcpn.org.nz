@@ -1,6 +1,8 @@
 <?php
 class RightSidebarPage extends Page {
 
+	private static $description = 'A standard page with one sidebar on the left';
+
 	private static $has_one = array(
 		'TopSidebarUrl' => 'SiteTree',
 		'MiddleSidebarUrl' => 'SiteTree',
