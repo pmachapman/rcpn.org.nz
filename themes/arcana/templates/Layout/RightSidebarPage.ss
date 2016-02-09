@@ -31,6 +31,21 @@
 						<% end_if %>
 					</section>
 					<% end_if %>
+					<% if $MiddleSidebarHeading || $MiddleSidebarContent %>
+					<section>
+						<% if $MiddleSidebarHeading %>
+						<h3>$MiddleSidebarHeading</h3>
+						<% end_if %>
+						<% if $MiddleSidebarContent %>
+						<p>$MiddleSidebarContent</p>
+						<% end_if %>
+						<% if $MiddleSidebarButton && $MiddleSidebarUrl %>
+						<footer>
+							<a href="$MiddleSidebarUrl.Link" class="button">$MiddleSidebarButton</a>
+						</footer>
+						<% end_if %>
+					</section>
+					<% end_if %>
 					<% if $BottomSidebarHeading || $BottomSidebarContent %>
 					<section>
 						<% if $BottomSidebarHeading %>
