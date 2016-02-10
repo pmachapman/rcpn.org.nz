@@ -10,6 +10,9 @@
 						<p>You searched for &quot;{$Query}&quot;</p>
 					<% end_if %>
 				</header>
+				<% if $BannerImage %>
+				<span class="image featured"><img src="$BannerImage.URL" alt="" /></span>
+				<% end_if %>
 				<% if $Results %>
 				<ul id="SearchResults">
 					<% loop $Results %>

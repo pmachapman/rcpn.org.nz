@@ -7,8 +7,18 @@ class Page extends SiteTree {
 	);
 
 	private static $has_one = array(
+		'BannerImage' => 'Image'
 	);
 
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+
+		// Add the banner image
+		$fields->addFieldToTab('Root.Main', new HeaderField('BannerSection', 'Banner'), 'Content');
+		$fields->addFieldToTab('Root.Main', new UploadField('BannerImage', 'Banner image'), 'Content');
+
+		return $fields;
+	}
 }
 class Page_Controller extends ContentController {
 

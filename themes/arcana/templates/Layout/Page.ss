@@ -7,6 +7,9 @@
 				<header>
 					<h2>$Title</h2>
 				</header>
+				<% if $BannerImage %>
+				<span class="image featured"><img src="$BannerImage.URL" alt="" /></span>
+				<% end_if %>
 				$Content
 			</article>
 		</div>
