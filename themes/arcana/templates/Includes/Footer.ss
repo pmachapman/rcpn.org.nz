@@ -8,7 +8,7 @@
 				<h3>Other Links</h3>
 				<ul class="links">
 					<% loop externalLinks %>
-					<li><a href="$Address" target="_blank">$Name</a></li>
+					<li><a href="$Address" target="_blank" rel="nofollow">$Name</a></li>
 					<% end_loop %>
 				</ul>
 			</section>
