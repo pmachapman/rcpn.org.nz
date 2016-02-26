@@ -1,3 +1,6 @@
 [submodule "googlesitemaps"]
 	path = googlesitemaps
 	url = https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git
+[submodule "gridfieldextensions"]
+	path = gridfieldextensions
+	url = https://github.com/silverstripe-australia/silverstripe-gridfieldextensions.git

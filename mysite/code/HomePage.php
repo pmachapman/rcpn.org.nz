@@ -108,19 +108,19 @@ class HomePage extends Page {
 		$fields->addFieldToTab('Root.Main', new TreeDropdownField("CallToActionUrlID", "Link Button To Page", "SiteTree"), 'Metadata');
 
 		// Create a default configuration for the new GridField, allowing record deletion
-		$config = GridFieldConfig_RecordEditor::create();
-
-		// Set the names and data for our gridfield columns
-		$config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
-			'Name' => 'Website Name',
-			'Address' => 'Website Address'
-		));
+		$config = GridFieldConfig::create();
+        $config->addComponent(new GridFieldButtonRow('before'));
+        $config->addComponent(new GridFieldToolbarHeader());
+        $config->addComponent(new GridFieldTitleHeader());
+        $config->addComponent(new GridFieldEditableColumns());
+        $config->addComponent(new GridFieldDeleteAction());
+        $config->addComponent(new GridFieldAddNewInlineButton());
 
 		// Create a gridfield to hold the submission relationship
 		$externalLinksGridField = new GridField(
 			'ExternalLinks', // Field name
 			'External Links', // Field title
-			$this->ExternalLinks(), // List of all related students
+			$this->ExternalLinks(), // List of all external links
 			$config
 		);
 
