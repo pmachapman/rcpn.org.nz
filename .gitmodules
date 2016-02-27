@@ -4,3 +4,6 @@
 [submodule "gridfieldextensions"]
 	path = gridfieldextensions
 	url = https://github.com/silverstripe-australia/silverstripe-gridfieldextensions.git
+[submodule "timepickerfield"]
+	path = timepickerfield
+	url = https://github.com/sheadawson/silverstripe-timepickerfield.git

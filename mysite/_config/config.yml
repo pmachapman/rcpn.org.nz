@@ -9,3 +9,6 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'arcana'
+DateField:
+  default_config:
+    showcalendar: true
