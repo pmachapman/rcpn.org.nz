@@ -62,6 +62,9 @@ class CalendarEvent extends DataObject {
 		// Hide the calendar event date tab
 		$fields->removeByName('CalendarEventDates');
 		
+		// Hide the calendar locations tab
+		$fields->removeByName('CalendarEventLocations');
+		
 		return $fields;
 	}
 	
