@@ -1,9 +1,11 @@
+/* Template Clean Up */
 .dropotron li a {
 	text-align: left;
 }
 section#banner {
 	background-image: url("../images/banner.jpg");
 }
+/* Content Fixes */
 #content ol {
 	list-style-type: decimal;
 	padding-left: 20px;
@@ -14,4 +16,20 @@ section#banner {
 }
 #content ol li, #content ul li {
 	padding-left: 10px;
+}
+/* Calendar Styles */
+@media screen and (max-width: 480px) {
+	.calendar h4 em {
+		display: block;
+	}
+}
+.calendar p {
+	padding-left: 10px;
+	margin-bottom: 1em;
+}
+.calendar div {
+	padding-left: 10px;
+}
+.calendar h4 {
+	margin-bottom: 0;
 }

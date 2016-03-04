@@ -64,4 +64,10 @@ class CalendarEvent extends DataObject {
 		
 		return $fields;
 	}
+	
+	public function LocationsList() {
+		if($this->Locations()->exists()) {
+			return implode(', ', $this->Locations()->column('Name'));
+		}
+    }
 }
