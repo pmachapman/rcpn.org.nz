@@ -38,7 +38,7 @@ class CalendarEvent extends DataObject {
 		$fields->addFieldToTab('Root.Main', new CheckboxSetField(
             'Locations',
             'Locations',
-            $this->CalendarPage()->CalendarLocations()->map('ID', 'Name')
+            CalendarLocation::get()->map('ID', 'Name')
         ), 'Description');
 
 		// Create a default configuration for the new GridField, allowing record deletion
