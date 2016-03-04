@@ -12,4 +12,6 @@ class CalendarEventDate extends DataObject {
 	public static $summary_fields = array(
 		'Date' => 'Date'
 	);
+	
+	private static $default_sort = '"Date"';
 }

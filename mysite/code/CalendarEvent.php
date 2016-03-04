@@ -53,7 +53,7 @@ class CalendarEvent extends DataObject {
 		$externalLinksGridField = new GridField(
 			'CalendarEventDatesGrid', // Field name
 			'Dates', // Field title
-			$this->CalendarEventDates()->sort('Date'), // List of all event dates
+			$this->CalendarEventDates(), // List of all event dates
 			$config
 		);
 
