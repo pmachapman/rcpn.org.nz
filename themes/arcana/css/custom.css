@@ -5,6 +5,18 @@
 section#banner {
 	background-image: url("../images/banner.jpg");
 }
+/* Header Logo */
+#header h1 {
+	width: 239px;
+	height: 178px;
+	background: url("../images/logo.png") no-repeat center;
+	margin-bottom: 2em;
+	padding: 0;
+	width: 100%;
+}
+#header h1 a#logo {
+  display: none;
+}
 /* Content Fixes */
 #content ol {
 	list-style-type: decimal;
