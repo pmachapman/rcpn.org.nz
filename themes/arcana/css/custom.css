@@ -6,11 +6,14 @@ section#banner {
 	background-image: url("../images/banner.jpg");
 }
 /* Header Logo */
+#header {
+	padding-top: 0.5em;
+}
 #header h1 {
 	width: 239px;
 	height: 178px;
 	background: url("../images/logo.png") no-repeat center;
-	margin-bottom: 2em;
+	margin-bottom: 0.5em;
 	padding: 0;
 	width: 100%;
 }
@@ -44,4 +47,75 @@ section#banner {
 }
 .calendar h4 {
 	margin-bottom: 0;
+}
+/* Booking Calendar Styles */
+.booking-calendar-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	border-right: 1px solid #C0C0C0;
+	border-bottom: 1px solid #C0C0C0;
+}
+.booking-calendar {
+	height: 600px;
+	width: 1120px;
+	background: url("../images/booking-calendar-grid.gif") top left repeat;
+}
+.booking-calendar .empty-header {
+	height: 40px;
+	width: 119px;
+	background: #fff;
+	float: left;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.booking-calendar .time-header {
+	height: 40px;
+	width: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 36px;
+	text-align: center;
+	float: left;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.booking-calendar .last-time-header {
+	height: 40px;
+	width: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 36px;
+	text-align: center;
+	float: left;
+	border: 1px solid #000;
+	clear: right;
+}
+.booking-calendar .day-header {
+	height: 40px;
+	width: 120px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 36px;
+	text-align: right;
+	padding-right: 10px;
+	background: #fff;
+	clear: left;
+	float: left;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.booking-calendar .booking {
+	border: 1px solid #000;
+	overflow: hidden;
+	font-size: 12px;
+	background-color: #FFB27F;
+	position: relative;
+	height: 40px;
+	line-height: 35px;
+	text-align: center;
+	font-weight: bold;
+	cursor: default;
 }
