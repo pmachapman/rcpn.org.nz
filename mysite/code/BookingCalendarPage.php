@@ -26,7 +26,7 @@ class BookingCalendarPage_Controller extends Page_Controller {
 
 	public function GetCalendarEvents() {
 		// Get the next 14 days
-		$sql = "SELECT `CalendarEvent`.*, `Date`, DATEDIFF(`Date`, CURDATE()) * 40 AS `Top`, HOUR(`StartTime`) * 40 AS `Left`, (HOUR(`EndTime`) - HOUR(`StartTime`)) * 40 AS `Width` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` WHERE `Date` >= CURDATE() AND `Date` <= DATE_ADD(CURDATE(), INTERVAL 14 DAY) ORDER BY `Date`, `StartTime`, `EndTime`";
+		$sql = "SELECT `CalendarEvent`.*, `Date`, (DATEDIFF(`Date`, CURDATE()) * 40) + 40 AS `Top`, HOUR(`StartTime`) * 40 AS `Left`, (HOUR(`EndTime`) - HOUR(`StartTime`)) * 40 AS `Width` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` WHERE `Date` >= CURDATE() AND `Date` <= DATE_ADD(CURDATE(), INTERVAL 14 DAY) ORDER BY `Date`, `StartTime`, `EndTime`";
 		$records = DB::query($sql);
 		foreach ($records as $record) {
 			$objects[] = new $record['ClassName']($record);

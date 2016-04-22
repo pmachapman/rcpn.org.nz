@@ -59,6 +59,7 @@ section#banner {
 	height: 600px;
 	width: 1120px;
 	background: url("../images/booking-calendar-grid.gif") top left repeat;
+	position: relative;
 }
 .booking-calendar .empty-header {
 	height: 40px;
@@ -112,7 +113,7 @@ section#banner {
 	overflow: hidden;
 	font-size: 12px;
 	background-color: #FFB27F;
-	position: relative;
+	position: absolute;
 	height: 40px;
 	line-height: 35px;
 	text-align: center;
