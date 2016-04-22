@@ -30,6 +30,9 @@ class CalendarEvent extends DataObject {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 		
+		// Hide the calendar locations tab
+		$fields->removeByName('Locations');
+		
 		// Use the time picker field
 		$fields->addFieldToTab('Root.Main', new TimePickerField('StartTime'), 'Description');
 		$fields->addFieldToTab('Root.Main', new TimePickerField('EndTime'), 'Description');
@@ -61,9 +64,6 @@ class CalendarEvent extends DataObject {
 		
 		// Hide the calendar event date tab
 		$fields->removeByName('CalendarEventDates');
-		
-		// Hide the calendar locations tab
-		$fields->removeByName('CalendarEventLocations');
 		
 		return $fields;
 	}
