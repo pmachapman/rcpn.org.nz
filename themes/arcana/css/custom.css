@@ -119,5 +119,5 @@ section#banner {
 	line-height: 35px;
 	text-align: center;
 	font-weight: bold;
-	cursor: default;
+	cursor: pointer;
 }

@@ -28,10 +28,10 @@
 					<a href="$URLSegment?view=all">All Upcoming</a>
 				</p>
 				<div class="calendar">
-				<% loop $GroupedCalendarEventsByDate.GroupedBy(Date) %>
-					<h3>$Date</h3>
+				<% loop $GroupedCalendarEventsByDate.GroupedBy(FormattedDate) %>
+					<h3>$FormattedDate</h3>
 						<% loop $Children %>
-							<h4><em>$StartTime.Nice() - $EndTime.Nice()</em> $Title</h4>
+							<h4 id="event-$ID-$Date"><em>$StartTime.Nice() - $EndTime.Nice()</em> $Title</h4>
 							<div><em>$LocationsList</em></div>
 							$Description
 						<% end_loop %>

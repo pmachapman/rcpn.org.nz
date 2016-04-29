@@ -38,4 +38,8 @@ class BookingCalendarPage_Controller extends Page_Controller {
 		}
         return $arrayList;
     }
+	
+	public function GetCalendarPage(){
+		return DataObject::get_one(CalendarPage);
+	}
 }
