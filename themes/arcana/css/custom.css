@@ -51,13 +51,14 @@ section#banner {
 /* Booking Calendar Styles */
 .booking-calendar-wrapper {
 	width: 100%;
+	max-width: 840px;
 	overflow-x: auto;
 	border-right: 1px solid #C0C0C0;
 	border-bottom: 1px solid #C0C0C0;
 }
 .booking-calendar {
 	height: 600px;
-	width: 1120px;
+	width: 839px;
 	background: url("../images/booking-calendar-grid.gif") top left repeat;
 	position: relative;
 }

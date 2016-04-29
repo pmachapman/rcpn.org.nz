@@ -15,13 +15,6 @@
 				<div class="booking-calendar-wrapper">
 					<div class="booking-calendar">
 						<div class="empty-header"></div>
-						<div class="time-header">12 am</div>
-						<div class="time-header">1 am</div>
-						<div class="time-header">2 am</div>
-						<div class="time-header">3 am</div>
-						<div class="time-header">4 am</div>
-						<div class="time-header">5 am</div>
-						<div class="time-header">6 am</div>
 						<div class="time-header">7 am</div>
 						<div class="time-header">8 am</div>
 						<div class="time-header">9 am</div>
