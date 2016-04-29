@@ -74,7 +74,7 @@ section#banner {
 .booking-calendar .time-header {
 	height: 40px;
 	width: 40px;
-	font-size: 14px;
+	font-size: 14px; /* There is a 12px fix for this in ie8.css */
 	font-weight: bold;
 	line-height: 36px;
 	text-align: center;
@@ -86,7 +86,7 @@ section#banner {
 .booking-calendar .last-time-header {
 	height: 40px;
 	width: 40px;
-	font-size: 14px;
+	font-size: 14px; /* There is a 12px fix for this in ie8.css */
 	font-weight: bold;
 	line-height: 36px;
 	text-align: center;

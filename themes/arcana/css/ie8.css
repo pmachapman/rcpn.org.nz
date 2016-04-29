@@ -65,3 +65,11 @@
 	.wrapper.style2 {
 		background: #fdfdfd url("images/bg01.png");
 	}
+
+/* Booking Calendar */
+.booking-calendar .time-header {
+	font-size: 12px !important;
+}
+.booking-calendar .last-time-header {
+	font-size: 12px !important;
+}
