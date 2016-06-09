@@ -21,7 +21,7 @@ Feel free to use code from this project for your own use.
 
 To deploy this project:
 
- 1. Install a copy of SilverStripe 3.2 or higher via Composer, including the Simple theme.
+ 1. Install a copy of SilverStripe from https://www.silverstripe.org/download/
  2. Install the following extensions:
    1. silverstripe/googlesitemaps
    2. silverstripe-australia/gridfieldextensions
