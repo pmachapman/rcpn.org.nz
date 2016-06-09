@@ -21,12 +21,16 @@ _ss_environment.php
 /siteconfig/
 /.editorconfig
 /.htaccess
-/composer.json
 /composer.lock
 /composer.phar
 /index.php
 /install-frameworkmissing.html
 /web.config
+
+# ignore SilverStripe modules
+/googlesitemaps/
+/gridfieldextensions/
+/timepickerfield/
 
 # Ignore temporary files
 Thumbs.db
