@@ -40,7 +40,7 @@ class CalendarEvent extends DataObject {
 		$fields->addFieldToTab('Root.Main', new TimePickerField('EndTime'), 'Description');
 		
 		// Add a private flag
-		$fields->addFieldToTab('Root.Main', new CheckboxField ('Private'), 'Description');
+		$fields->addFieldToTab('Root.Main', new CheckboxField('Private', 'Private Booking'), 'Description');
 		
 		// Add the locations
 		$fields->addFieldToTab('Root.Main', new CheckboxSetField(
