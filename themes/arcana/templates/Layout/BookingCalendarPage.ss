@@ -36,7 +36,7 @@
 						<% loop $GetDateArray %>
 						<div class="day-header">$Date</div><% end_loop %>
 						<% loop $GetCalendarEvents %>
-						<div class="booking" style="top:{$Top}px;left:{$Left}px;width:{$Width}px" title="$Title" onclick="location.href='{$CalendarPage.Link}#event-$ID-$Date'">$Title</div><% end_loop %>
+						<div class="booking" style="top:{$Top}px;left:{$Left}px;width:{$Width}px" title="<% if $Private %>Private Booking<% else %>$Title<% end_if %>" onclick="location.href='{$CalendarPage.Link}#event-$ID-$Date'"><% if $Private %>Private Booking<% else %>$Title<% end_if %></div><% end_loop %>
 					</div>
 				</div>
 			</article>

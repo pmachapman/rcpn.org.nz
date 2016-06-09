@@ -6,7 +6,8 @@ class CalendarEvent extends DataObject {
 		'Title' => 'Varchar(255)',
 		'StartTime' => 'Time',
 		'EndTime' => 'Time',
-		'Description' => 'HTMLText'
+		'Description' => 'HTMLText',
+		'Private' => 'Boolean'
 	);
 
 	public static $has_one = array(
@@ -24,7 +25,8 @@ class CalendarEvent extends DataObject {
 	public static $summary_fields = array(
 		'Title' => 'Title',
 		'StartTime' => 'Start Time',
-		'EndTime' => 'End Time'
+		'EndTime' => 'End Time',
+		'Private' => 'Private Booking'
 	);
 
 	public function getCMSFields() {
@@ -36,6 +38,9 @@ class CalendarEvent extends DataObject {
 		// Use the time picker field
 		$fields->addFieldToTab('Root.Main', new TimePickerField('StartTime'), 'Description');
 		$fields->addFieldToTab('Root.Main', new TimePickerField('EndTime'), 'Description');
+		
+		// Add a private flag
+		$fields->addFieldToTab('Root.Main', new CheckboxField ('Private'), 'Description');
 		
 		// Add the locations
 		$fields->addFieldToTab('Root.Main', new CheckboxSetField(

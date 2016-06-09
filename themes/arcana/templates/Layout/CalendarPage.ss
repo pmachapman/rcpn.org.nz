@@ -31,9 +31,9 @@
 				<% loop $GroupedCalendarEventsByDate.GroupedBy(FormattedDate) %>
 					<h3>$FormattedDate</h3>
 						<% loop $Children %>
-							<h4 id="event-$ID-$Date"><em>$StartTime.Nice() - $EndTime.Nice()</em> $Title</h4>
+							<h4 id="event-$ID-$Date"><em>$StartTime.Nice() - $EndTime.Nice()</em> <% if $Private %>Private Booking<% else %>$Title<% end_if %></h4>
 							<div><em>$LocationsList</em></div>
-							$Description
+							<% if $Private %><% else %>$Description<% end_if %>
 						<% end_loop %>
 				<% end_loop %>
 				</div>
