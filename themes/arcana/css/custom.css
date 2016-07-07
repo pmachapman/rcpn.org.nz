@@ -121,3 +121,16 @@ section#banner {
 	font-weight: bold;
 	cursor: pointer;
 }
+
+/* Monthly Calendar View Styles */
+.monthly a {
+	border-bottom: 0 !important;
+}
+.monthly .monthly-header-title {
+	font-size: 1.2em !important;
+}
+.monthly .monthly-header-title a {
+	font-weight: normal !important;
+	box-sizing: content-box !important;
+	text-decoration: underline !important;
+}

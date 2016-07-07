@@ -7,11 +7,14 @@
 				<header>
 					<h2>$Title</h2>
 				</header>
-				$CalendarView
 				<% if $BannerImage %>
 				<span class="image featured"><img src="$BannerImage.URL" alt="" /></span>
 				<% end_if %>
 				$Content
+				<!--[if gt IE 8]><!-->
+				<div class="monthly" id="mycalendar"></div>
+				<h2>Browse Events</h2>
+				<!--<![endif]-->
 				<p>
 					<a href="$URLSegment?view=thisweek">This Week</a>
 					-

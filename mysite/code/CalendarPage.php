@@ -77,6 +77,8 @@ class CalendarPage_Controller extends Page_Controller {
 			$sql = "SELECT `CalendarEvent`.*, `CalendarEventDate`.`Date`, DATE_FORMAT(`CalendarEventDate`.`Date`, '%W %e %M %Y') AS `FormattedDate` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` WHERE `Date` >= CONCAT(YEAR(CURDATE()) + 1, '-01-01') AND `Date` <= CONCAT(YEAR(CURDATE()) + 1, '-12-31') ORDER BY `CalendarEventDate`.`Date`, `CalendarEvent`.`StartTime`, `CalendarEvent`.`EndTime`";
 		} elseif ($view == "all") {
 			$sql = "SELECT `CalendarEvent`.*, `CalendarEventDate`.`Date`, DATE_FORMAT(`CalendarEventDate`.`Date`, '%W %e %M %Y') AS `FormattedDate` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` WHERE `Date` >= CURDATE() ORDER BY `CalendarEventDate`.`Date`, `CalendarEvent`.`StartTime`, `CalendarEvent`.`EndTime`";
+		} elseif ($view == "events") {
+			$sql = "SELECT `CalendarEvent`.*, `CalendarEventDate`.`Date`, DATE_FORMAT(`CalendarEventDate`.`Date`, '%W %e %M %Y') AS `FormattedDate` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` ORDER BY `CalendarEventDate`.`Date`, `CalendarEvent`.`StartTime`, `CalendarEvent`.`EndTime`";
 		} else {
 			// Default to the next 14 days
 			$sql = "SELECT `CalendarEvent`.*, `CalendarEventDate`.`Date`, DATE_FORMAT(`CalendarEventDate`.`Date`, '%W %e %M %Y') AS `FormattedDate` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` WHERE `Date` >= CURDATE() AND `Date` <= DATE_ADD(CURDATE(), INTERVAL 14 DAY) ORDER BY `CalendarEventDate`.`Date`, `CalendarEvent`.`StartTime`, `CalendarEvent`.`EndTime`";

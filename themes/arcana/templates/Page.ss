@@ -7,6 +7,7 @@
 <html lang="$ContentLocale">
 	<head>
 		<% base_tag %>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,6 +15,7 @@
 		$MetaTags(false)
 		<% require themedCSS('main') %>
 		<% require themedCSS('custom') %>
+		<% require themedCSS('monthly') %>
 		<!--[if lte IE 8]><link rel="stylesheet" href="{$ThemeDir}/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="{$ThemeDir}/css/ie9.css" /><![endif]-->
 		<link rel="shortcut icon" href="$ThemeDir/images/favicon.ico" />
@@ -32,5 +34,9 @@
 			<script src="{$ThemeDir}/js/util.js"></script>
 			<!--[if lte IE 8]><script src="{$ThemeDir}/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{$ThemeDir}/js/main.js"></script>
+			<!--[if gt IE 8]><!-->
+			<script src="{$ThemeDir}/js/monthly.js"></script>
+			<script src="{$ThemeDir}/js/calendar.js"></script>
+			<!--<![endif]-->
 	</body>
 </html>
