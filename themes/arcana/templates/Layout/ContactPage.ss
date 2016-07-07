@@ -10,7 +10,7 @@
 					<span class="image featured"><img src="$BannerImage.URL" alt="" /></span>
 					<% end_if %>
 					<% if $Blurb %>
-					<p>$Blurb</p>
+					$Blurb
 					<% end_if %>
 				</header>
 				<div class="row">

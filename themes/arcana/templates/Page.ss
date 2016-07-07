@@ -10,7 +10,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		$MetaTags(false)
 		<% require themedCSS('main') %>
 		<% require themedCSS('custom') %>
