@@ -18,7 +18,7 @@ class CalendarXmlController extends ContentController
 		$this->getResponse()->addHeader('Content-Type', 'application/xml; charset="utf-8"');
 		$this->getResponse()->addHeader('X-Robots-Tag', 'noindex');
 
-		$sql = "SELECT `CalendarEvent`.*, `CalendarEventDate`.`Date`, DATE_FORMAT(`CalendarEventDate`.`Date`, '%W %e %M %Y') AS `FormattedDate` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` ORDER BY `CalendarEventDate`.`Date`, `CalendarEvent`.`StartTime`, `CalendarEvent`.`EndTime`";
+		$sql = "SELECT `CalendarEvent`.*, `CalendarEventDate`.`Date`, DATE_FORMAT(`CalendarEventDate`.`Date`, '%W %e %M %Y') AS `FormattedDate`, TIME_FORMAT(`CalendarEvent`.`StartTime`, '%k:%i') AS `FormattedStartTime`, TIME_FORMAT(`CalendarEvent`.`EndTime`, '%k:%i') AS `FormattedEndTime` FROM `CalendarEvent` INNER JOIN `CalendarEventDate` ON `CalendarEventDate`.`CalendarEventID` = `CalendarEvent`.`ID` ORDER BY `CalendarEventDate`.`Date`, `CalendarEvent`.`StartTime`, `CalendarEvent`.`EndTime`";
 		$records = DB::query($sql);
 		foreach($records as $record) {
 			$objects[] = new $record['ClassName']($record);
