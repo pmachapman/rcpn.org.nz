@@ -45,8 +45,11 @@ section#banner {
 .calendar div {
 	padding-left: 10px;
 }
-.calendar h4 {
+.calendar h4, .calendar h3 {
 	margin-bottom: 0;
+}
+.calendar h4 em {
+	display: block;
 }
 /* Booking Calendar Styles */
 .booking-calendar-wrapper {
