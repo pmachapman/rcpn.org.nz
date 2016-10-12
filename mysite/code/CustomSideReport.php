@@ -37,6 +37,16 @@ class CustomSideReport_FacilityBookings extends SS_Report {
 			date("Y-12-31")
 		));
 
+		$params->push(new DropdownField(
+			"PrivateBookings", 
+			"Private Bookings",
+			array(
+				'Both' => 'Show Private and Public',
+				'Private' => 'Show Private Bookings Only',
+				'Public'=> 'Show Public Bookings Only'
+			)
+		));
+
 		return $params;
 	}
 
@@ -76,6 +86,18 @@ class CustomSideReport_FacilityBookings extends SS_Report {
 			$toDate = new SS_DateTime('ToDate');
 			$toDate->setValue($params['DateTo']);
 			$sqlQuery->addWhere(array('Date <= ?' => $toDate->Format("Y-m-d")));
+		}
+
+		if (isset($params['PrivateBookings']))
+		{
+			if ($params['PrivateBookings'] == 'Private')
+			{
+				$sqlQuery->addWhere('Private = 1');
+			}
+			elseif ($params['PrivateBookings'] == 'Public')
+			{
+				$sqlQuery->addWhere('Private = 0');
+			}
 		}
 
 		$sqlQuery->addOrderBy('Date');
