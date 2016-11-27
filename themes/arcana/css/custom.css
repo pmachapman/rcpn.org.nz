@@ -133,7 +133,9 @@ section#banner {
 	font-size: 1.2em !important;
 }
 .monthly .monthly-header-title a {
-	font-weight: normal !important;
-	box-sizing: content-box !important;
-	text-decoration: underline !important;
+	border-bottom: 1px solid #ccc !important;
+}
+.monthly .monthly-header-title a {
+	font-size: 1.2em !important;
+	height: 30px !important;
 }
