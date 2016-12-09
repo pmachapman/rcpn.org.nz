@@ -95,7 +95,6 @@ class ContactPage_Controller extends Page_Controller {
 	}
 
 	function SendContactForm($data, $form) {
-
 		// Create submission object
 		$submission = new ContactFormSubmission();
 		$submission->ContactPageID = $this->ID;
@@ -109,6 +108,9 @@ class ContactPage_Controller extends Page_Controller {
 		$To = $this->MailTo;
 		$Subject = 'PNRC Website Contact Message';
 		$email = new Email($From, $To, $Subject);
+
+		// Set the reply-to address
+		$email->replyTo($data['Email']);
 
 		// Set template
 		$email->setTemplate('ContactEmail');
