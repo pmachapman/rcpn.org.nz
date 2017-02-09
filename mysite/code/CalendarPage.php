@@ -17,6 +17,7 @@ class CalendarPage extends Page {
 		// Set the names and data for our gridfield columns
 		$config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
 			'Title' => 'Title',
+			'EventDates' => 'Dates',
 			'StartTime' => 'Start Time',
 			'EndTime' => 'End Time'
 		));

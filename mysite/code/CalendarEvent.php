@@ -78,4 +78,10 @@ class CalendarEvent extends DataObject {
 			return implode(', ', $this->Locations()->column('Name'));
 		}
 	}
+
+	public function getEventDates() {
+		if($this->CalendarEventDates()->exists()) {
+			return implode(', ', $this->CalendarEventDates()->column('Date'));
+		}
+	}
 }
