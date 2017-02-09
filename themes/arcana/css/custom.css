@@ -129,13 +129,6 @@ section#banner {
 .monthly a {
 	border-bottom: 0 !important;
 }
-.monthly .monthly-header-title {
-	font-size: 1.2em !important;
-}
 .monthly .monthly-header-title a {
 	border-bottom: 1px solid #ccc !important;
-}
-.monthly .monthly-header-title a {
-	font-size: 1.2em !important;
-	height: 30px !important;
 }
