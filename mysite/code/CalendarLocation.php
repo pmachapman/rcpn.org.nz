@@ -5,9 +5,9 @@ class CalendarLocation extends DataObject {
 		'Name' => 'Varchar(255)'
 	);
 
-    private static $belongs_many_many = array (
-        'CalendarEvents' => 'CalendarEvent'
-    );
+	private static $belongs_many_many = array (
+		'CalendarEvents' => 'CalendarEvent'
+	);
 
 	public static $has_one = array(
 		'CalendarPage' => 'CalendarPage'

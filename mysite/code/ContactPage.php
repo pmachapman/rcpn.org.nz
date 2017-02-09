@@ -49,9 +49,9 @@ class ContactPage extends Page {
 		);
 
 		// Create a tab named "Enquiries" and add our field to it
-		$fields->addFieldToTab('Root.Enquiries', $contactFormEnquiriesGridField); 
+		$fields->addFieldToTab('Root.Enquiries', $contactFormEnquiriesGridField);
 
-		return $fields; 
+		return $fields;
 	}
 }
 class ContactPage_Controller extends Page_Controller {
@@ -61,7 +61,7 @@ class ContactPage_Controller extends Page_Controller {
 	);
 
 	function ContactForm() {
-		
+
 		// Set up the fields
 		$nameField = new TextField('Name', 'Name');
 		$nameField->setAttribute('placeholder', 'Name');

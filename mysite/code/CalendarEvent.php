@@ -1,6 +1,6 @@
 <?php
 class CalendarEvent extends DataObject {
-	
+
 	// Add new columns to the database
 	static $db = array(
 		'Title' => 'Varchar(255)',
@@ -31,31 +31,31 @@ class CalendarEvent extends DataObject {
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-		
+
 		// Hide the calendar locations tab
 		$fields->removeByName('Locations');
-		
+
 		// Use the time picker field
 		$fields->addFieldToTab('Root.Main', new TimePickerField('StartTime'), 'Description');
 		$fields->addFieldToTab('Root.Main', new TimePickerField('EndTime'), 'Description');
-		
+
 		// Add a private flag
 		$fields->addFieldToTab('Root.Main', new CheckboxField('Private', 'Private Booking'), 'Description');
-		
+
 		// Add the locations
 		$fields->addFieldToTab('Root.Main', new CheckboxSetField(
-            'Locations',
-            'Locations',
-            CalendarLocation::get()->map('ID', 'Name')
-        ), 'Description');
+			'Locations',
+			'Locations',
+			CalendarLocation::get()->map('ID', 'Name')
+		), 'Description');
 
 		// Create a default configuration for the new GridField, allowing record deletion
 		$config = GridFieldConfig::create();
-        $config->addComponent(new GridFieldButtonRow('before'));
-        $config->addComponent(new GridFieldToolbarHeader());
-        $config->addComponent(new GridFieldEditableColumns());
-        $config->addComponent(new GridFieldDeleteAction());
-        $config->addComponent(new GridFieldAddNewInlineButton());
+		$config->addComponent(new GridFieldButtonRow('before'));
+		$config->addComponent(new GridFieldToolbarHeader());
+		$config->addComponent(new GridFieldEditableColumns());
+		$config->addComponent(new GridFieldDeleteAction());
+		$config->addComponent(new GridFieldAddNewInlineButton());
 
 		// Create a gridfield to hold the dates
 		$externalLinksGridField = new GridField(
@@ -66,16 +66,16 @@ class CalendarEvent extends DataObject {
 		);
 
 		$fields->addFieldToTab('Root.Main', $externalLinksGridField, 'Description');
-		
+
 		// Hide the calendar event date tab
 		$fields->removeByName('CalendarEventDates');
-		
+
 		return $fields;
 	}
-	
+
 	public function LocationsList() {
 		if($this->Locations()->exists()) {
 			return implode(', ', $this->Locations()->column('Name'));
 		}
-    }
+	}
 }

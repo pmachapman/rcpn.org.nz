@@ -1,28 +1,28 @@
 <?php
 class BookingCalendarPage extends Page {
 
-    private static $description = 'The booking calendar page template';
+	private static $description = 'The booking calendar page template';
 }
 class BookingCalendarPage_Controller extends Page_Controller {
 
-    public function init() {
-        parent::init();
-    }
-    
-    public function GetDateArray() {
-        $day = date("Y-m-d");
-        $days[] = $day;
-        for ($i = 1; $i < 14; $i++) {
-            $day = date("Y-m-d", strtotime("+1 day", strtotime($day)));
-            $days[] = $day;
-        }
+	public function init() {
+		parent::init();
+	}
+
+	public function GetDateArray() {
+		$day = date("Y-m-d");
+		$days[] = $day;
+		for ($i = 1; $i < 14; $i++) {
+			$day = date("Y-m-d", strtotime("+1 day", strtotime($day)));
+			$days[] = $day;
+		}
 		$result = ArrayList::create();
-        foreach ($days as $day) {
+		foreach ($days as $day) {
 			$r = ArrayData::create(array('Date' => date("d/m/Y", strtotime($day))));
 			$result->push($r);
 		}
-    return $result;
-    }
+	return $result;
+	}
 
 	public function GetCalendarEvents() {
 		// Get the next 14 days
@@ -36,9 +36,9 @@ class BookingCalendarPage_Controller extends Page_Controller {
 		} else {
 			$arrayList = new ArrayList();
 		}
-        return $arrayList;
-    }
-	
+		return $arrayList;
+	}
+
 	public function GetCalendarPage(){
 		return DataObject::get_one(CalendarPage);
 	}

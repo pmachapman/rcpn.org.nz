@@ -30,16 +30,16 @@ class CalendarPage extends Page {
 		);
 
 		// Create a tab named "Calendar" and add our field to it
-		$fields->addFieldToTab('Root.Calendar', $calendarEventsGridField); 
-		
+		$fields->addFieldToTab('Root.Calendar', $calendarEventsGridField);
+
 		// Create a default configuration for the location GridField, allowing record deletion
 		$locationsConfig = GridFieldConfig::create();
-        $locationsConfig->addComponent(new GridFieldButtonRow('before'));
-        $locationsConfig->addComponent(new GridFieldToolbarHeader());
-        $locationsConfig->addComponent(new GridFieldTitleHeader());
-        $locationsConfig->addComponent(new GridFieldEditableColumns());
-        $locationsConfig->addComponent(new GridFieldDeleteAction());
-        $locationsConfig->addComponent(new GridFieldAddNewInlineButton());
+		$locationsConfig->addComponent(new GridFieldButtonRow('before'));
+		$locationsConfig->addComponent(new GridFieldToolbarHeader());
+		$locationsConfig->addComponent(new GridFieldTitleHeader());
+		$locationsConfig->addComponent(new GridFieldEditableColumns());
+		$locationsConfig->addComponent(new GridFieldDeleteAction());
+		$locationsConfig->addComponent(new GridFieldAddNewInlineButton());
 
 		// Create a gridfield to hold the locations
 		$locationsGridField = new GridField(
@@ -57,9 +57,9 @@ class CalendarPage extends Page {
 }
 class CalendarPage_Controller extends Page_Controller {
 
-    public function init() {
-        parent::init();
-    }
+	public function init() {
+		parent::init();
+	}
 
 	public function GroupedCalendarEventsByDate() {
 		$view = $this->getRequest()->getVar('view');
@@ -92,6 +92,6 @@ class CalendarPage_Controller extends Page_Controller {
 		} else {
 			$arrayList = new ArrayList();
 		}
-        return GroupedList::create($arrayList);
-    }
+		return GroupedList::create($arrayList);
+	}
 }

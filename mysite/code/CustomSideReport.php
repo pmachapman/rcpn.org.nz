@@ -3,7 +3,7 @@ class CustomSideReport_FacilityBookings extends SS_Report {
 
 	// Show at the top of the list of reports
 	protected $sort = -1;
-	
+
 	// The name of the report
 	public function title() {
 		return 'Calendar Bookings';
@@ -20,25 +20,25 @@ class CustomSideReport_FacilityBookings extends SS_Report {
 
 		return $fields;
 	}
-	
-	function parameterFields() 
+
+	function parameterFields()
 	{
 		$params = new FieldList();
 
 		$params->push(new DateField(
-			"DateFrom", 
+			"DateFrom",
 			"Report From",
 			date("Y-01-01")
 		));
 
 		$params->push(new DateField(
-			"DateTo", 
+			"DateTo",
 			"Report To",
 			date("Y-12-31")
 		));
 
 		$params->push(new DropdownField(
-			"PrivateBookings", 
+			"PrivateBookings",
 			"Private Bookings",
 			array(
 				'Both' => 'Show Private and Public',
@@ -51,7 +51,7 @@ class CustomSideReport_FacilityBookings extends SS_Report {
 	}
 
 	// The records used for the report
-	function sourceRecords($params, $sort, $limit) 
+	function sourceRecords($params, $sort, $limit)
 	{
 		$result = $this->sourceQuery($params)->execute();
 		$list = ArrayList::create();

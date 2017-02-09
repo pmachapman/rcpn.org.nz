@@ -109,12 +109,12 @@ class HomePage extends Page {
 
 		// Create a default configuration for the new GridField, allowing record deletion
 		$config = GridFieldConfig::create();
-        $config->addComponent(new GridFieldButtonRow('before'));
-        $config->addComponent(new GridFieldToolbarHeader());
-        $config->addComponent(new GridFieldTitleHeader());
-        $config->addComponent(new GridFieldEditableColumns());
-        $config->addComponent(new GridFieldDeleteAction());
-        $config->addComponent(new GridFieldAddNewInlineButton());
+		$config->addComponent(new GridFieldButtonRow('before'));
+		$config->addComponent(new GridFieldToolbarHeader());
+		$config->addComponent(new GridFieldTitleHeader());
+		$config->addComponent(new GridFieldEditableColumns());
+		$config->addComponent(new GridFieldDeleteAction());
+		$config->addComponent(new GridFieldAddNewInlineButton());
 
 		// Create a gridfield to hold the submission relationship
 		$externalLinksGridField = new GridField(
