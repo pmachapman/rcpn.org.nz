@@ -1,6 +1,6 @@
 # Reformed Church of Palmerston North Website
 
-**Live Website:** http://rcpn.org.nz/
+**Live Website:** https://www.rcpn.org.nz/
 
 Welcome to the git repository for the Reformed Church of Palmerston North's SilverStripe website.
 
@@ -23,9 +23,9 @@ To deploy this project:
 
  1. Install a copy of SilverStripe from https://www.silverstripe.org/download/
  2. Install the following extensions:
-   1. silverstripe/googlesitemaps
-   2. silverstripe-australia/gridfieldextensions
-   3. silverstripe/timepickerfield
+    1. silverstripe/googlesitemaps
+    2. symbiote/gridfieldextensions
+    3. silverstripe/timepickerfield
  3. Check out the git repository to your website directory
  4. Run http://{your-website-here}/dev/build?flush=all
 

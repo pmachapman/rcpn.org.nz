@@ -1,6 +1,7 @@
 {
 	"name": "silverstripe/installer",
 	"description": "The SilverStripe Framework Installer",
+	"license" : "proprietary",
 	"require": {
 		"php": ">=5.3.3",
 		"silverstripe/cms": "^3.4",
@@ -10,7 +11,7 @@
 		"silverstripe-themes/simple": "^3.1",
 		"silverstripe/googlesitemaps": "^1.5",
 		"silverstripe/timepickerfield": "^1.0",
-		"silverstripe-australia/gridfieldextensions": "^1.4"
+		"symbiote/gridfieldextensions": "^1.4"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7"
