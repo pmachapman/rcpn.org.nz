@@ -24,11 +24,10 @@ To deploy this project:
  1. Install a copy of SilverStripe from https://www.silverstripe.org/download/
  2. Install the following extensions:
     1. silverstripe/googlesitemaps
-    2. symbiote/gridfieldextensions
-    3. silverstripe/timepickerfield
+    2. silverstripe/timepickerfield
+    3. symbiote/gridfieldextensions
  3. Check out the git repository to your website directory
  4. Run http://{your-website-here}/dev/build?flush=all
-
 
 To setup the website:
  1. Log into http://{your-website-here}/admin/ with your administrator account
