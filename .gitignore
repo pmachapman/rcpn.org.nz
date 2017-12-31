@@ -32,5 +32,8 @@ _ss_environment.php
 /gridfieldextensions/
 /timepickerfield/
 
-# Ignore temporary files
+# ignore temporary files
 Thumbs.db
+
+# ignore IDE files
+/.vscode
