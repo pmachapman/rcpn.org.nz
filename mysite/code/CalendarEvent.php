@@ -2,7 +2,7 @@
 class CalendarEvent extends DataObject {
 
 	// Add new columns to the database
-	static $db = array(
+	private static $db = array(
 		'Title' => 'Varchar(255)',
 		'StartTime' => 'Time',
 		'EndTime' => 'Time',
@@ -10,7 +10,7 @@ class CalendarEvent extends DataObject {
 		'Private' => 'Boolean'
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 		'CalendarPage' => 'CalendarPage'
 	);
 
@@ -22,7 +22,7 @@ class CalendarEvent extends DataObject {
 		'Locations' => 'CalendarLocation'
 	);
 
-	public static $summary_fields = array(
+	private static $summary_fields = array(
 		'Title' => 'Title',
 		'StartTime' => 'Start Time',
 		'EndTime' => 'End Time',

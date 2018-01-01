@@ -1,17 +1,17 @@
 <?php
 class ContactFormSubmission extends DataObject {
 	// Add new columns to the database
-	static $db = array(
+	private static $db = array(
 		'Name' => 'Text',
 		'Email' => 'Text',
 		'Message' => 'Text'
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 		'ContactPage' => 'ContactPage'
 	);
 
-	public static $summary_fields = array(
+	private static $summary_fields = array(
 		'Name' => 'Name',
 		'Email' => 'Email',
 		'Message' => 'Message'

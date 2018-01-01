@@ -1,7 +1,7 @@
 <?php
 class CalendarLocation extends DataObject {
 	// Add new columns to the database
-	static $db = array(
+	private static $db = array(
 		'Name' => 'Varchar(255)'
 	);
 
@@ -9,7 +9,7 @@ class CalendarLocation extends DataObject {
 		'CalendarEvents' => 'CalendarEvent'
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 		'CalendarPage' => 'CalendarPage'
 	);
 }

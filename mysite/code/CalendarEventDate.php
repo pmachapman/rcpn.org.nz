@@ -1,15 +1,15 @@
 <?php
 class CalendarEventDate extends DataObject {
 	// Add new columns to the database
-	static $db = array(
+	private static $db = array(
 		'Date' => 'Date'
 	);
 
-	public static $has_one = array(
+	private static $has_one = array(
 		'CalendarEvent' => 'CalendarEvent'
 	);
 
-	public static $summary_fields = array(
+	private static $summary_fields = array(
 		'Date' => 'Date'
 	);
 

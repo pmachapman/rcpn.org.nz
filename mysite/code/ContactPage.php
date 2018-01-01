@@ -3,7 +3,7 @@ class ContactPage extends Page {
 
 	private static $description = 'The contact us page template';
 
-	static $db = array(
+	private static $db = array(
 		'MailFrom' => 'Varchar(255)',
 		'MailTo' => 'Varchar(255)',
 		'SubmitText' => 'Text',
@@ -55,7 +55,7 @@ class ContactPage extends Page {
 	}
 }
 class ContactPage_Controller extends Page_Controller {
-	static $allowed_actions = array(
+	private static $allowed_actions = array(
 		'ContactForm',
 		'Success'
 	);
