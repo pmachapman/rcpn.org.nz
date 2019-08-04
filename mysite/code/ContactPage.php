@@ -91,6 +91,9 @@ class ContactPage_Controller extends Page_Controller {
 		$form = new Form($this, 'ContactForm', $fields, $actions, $validator);
 		$form->setTemplate('ContactForm');
 
+		// Add reCAPTCHA
+		$form->enableSpamProtection()->fields()->fieldByName('Captcha');
+
 		return $form;
 	}
 

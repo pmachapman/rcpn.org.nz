@@ -24,4 +24,5 @@
 			$Fields.dataFieldByName(SecurityID)
 		</div>
 	</div>
+	$Fields.dataFieldByName(Captcha)
 </form>
