@@ -11,7 +11,7 @@
 		"silverstripe-themes/simple": "^3.1",
 		"silverstripe/googlesitemaps": "^1.5",
 		"silverstripe/timepickerfield": "^1.0",
-		"symbiote/silverstripe-gridfieldextensions": "^1.4",
+		"symbiote/silverstripe-gridfieldextensions": "^2.1",
 		"undefinedoffset/silverstripe-nocaptcha": "^1.0"
 	},
 	"require-dev": {
