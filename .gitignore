@@ -30,6 +30,8 @@ _ss_environment.php
 # ignore SilverStripe modules
 /googlesitemaps/
 /gridfieldextensions/
+/nocaptcha/
+/spamprotection/
 /timepickerfield/
 
 # ignore temporary files
@@ -37,3 +39,8 @@ Thumbs.db
 
 # ignore IDE files
 /.vscode
+
+# Ignore web server files
+/.well-known
+robots.txt
+mysite/_config/secure.yml
