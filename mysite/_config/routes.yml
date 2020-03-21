@@ -1,6 +1,0 @@
----
-Name: mysiteroutes
----
-Director:
-  rules:
-    'calendar.xml': 'CalendarXmlController'

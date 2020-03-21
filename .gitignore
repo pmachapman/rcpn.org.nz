@@ -1,38 +1,26 @@
 # ignore cache folder
 /silverstripe-cache/
 
-# ignore all environment files
-_ss_environment.php
-
-# ignore build tools
-/tools/phing-metadata
+# ignore environment files
+/.env
 
 # ignore composer vendor folder
 /vendor/
 
 # ignore SilverStripe content files
-/assets/
+/public/
+
+# ignore default theme
+/themes/simple/
 
 # ignore SilverStripe CMS files
-/cms/
-/framework/
-/reports/
-/themes/simple/
-/siteconfig/
+/.cow
 /.editorconfig
+/.env.example
 /.htaccess
 /composer.lock
 /composer.phar
-/index.php
-/install-frameworkmissing.html
-/web.config
-
-# ignore SilverStripe modules
-/googlesitemaps/
-/gridfieldextensions/
-/nocaptcha/
-/spamprotection/
-/timepickerfield/
+/phpcs.xml.dist
 
 # ignore temporary files
 Thumbs.db
@@ -40,7 +28,5 @@ Thumbs.db
 # ignore IDE files
 /.vscode
 
-# Ignore web server files
-/.well-known
-robots.txt
-mysite/_config/secure.yml
+# ignore custom web server files
+app/_config/secure.yml

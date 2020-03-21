@@ -2,7 +2,7 @@
 <div id="footer">
 	<div class="container">
 		<div class="row">
-			<% control ShowExternalLinks %>
+			<% with ShowExternalLinks %>
 			<% if externalLinks %>
 			<section class="6u 6u(narrower) 12u$(mobilep)">
 				<h3>Other Links</h3>
@@ -13,16 +13,16 @@
 				</ul>
 			</section>
 			<% end_if %>
-			<% end_control %>
+			<% end_with %>
 			<section class="6u 6u(narrower) 12u$(mobilep)">
 				<% if $Form %>
 				$Form
 				<% else_if $CommentsForm %>
 				$CommentsForm
 				<% else %>
-				<% control ShowContactForm %>
+				<% with ShowContactForm %>
 				$ContactForm
-				<% end_control %>
+				<% end_with %>
 				<% end_if %>
 			</section>
 		</div>

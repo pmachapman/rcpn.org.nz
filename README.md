@@ -22,17 +22,14 @@ Feel free to use code from this project for your own use.
 To deploy this project:
 
  1. Install a copy of SilverStripe from https://www.silverstripe.org/download/
- 2. Install the following extensions:
-    1. silverstripe/googlesitemaps
-    2. silverstripe/timepickerfield
-    3. symbiote/silverstripe-gridfieldextensions
- 3. Check out the git repository to your website directory
- 4. Run http://{your-website-here}/dev/build?flush=all
+ 2. Check out the git repository to your website directory
+ 3. Run `composer upgrade`
+ 4. Run `composer vendor-expose`
+ 5. Run http://{your-website-here}/dev/build?flush=all
 
 To setup the website:
  1. Log into http://{your-website-here}/admin/ with your administrator account
- 2. Change the theme to arcana via the Settings page
- 3. Under Pages, select Contact Us, then select the Contact Form tab, and make sure all of the fields have values
+ 2. Under Pages, select Contact Us, then select the Contact Form tab, and make sure all of the fields have values
 
 ## Arcana by HTML5 UP
 html5up.net | @n33co
