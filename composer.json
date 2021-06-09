@@ -6,7 +6,7 @@
         "php": ">=7.1.0",
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "^4.5@stable",
-        "silverstripe-themes/simple": "~3.2.0",
+        "silverstripe-themes/simple": "^3.2.0",
         "silverstripe/googlesitemaps": "^2.1",
         "silverstripe/timepickerfield": "dev-master",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
@@ -49,7 +49,8 @@
             "themes/arcana/css",
             "themes/arcana/fonts",
             "themes/arcana/images",
-            "themes/arcana/js"
+            "themes/arcana/js",
+            "themes/simple/css"
         ]
     },
     
