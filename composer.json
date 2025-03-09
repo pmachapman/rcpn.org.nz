@@ -3,12 +3,12 @@
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.4.0",
         "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "^4.5@stable",
         "silverstripe-themes/simple": "^3.2.0",
         "silverstripe/googlesitemaps": "^2.1",
-        "silverstripe/timepickerfield": "dev-master",
+        "silverstripe/timepickerfield": "^2.0",
         "symbiote/silverstripe-gridfieldextensions": "^3.2",
         "undefinedoffset/silverstripe-nocaptcha": "^2.0"
     },
@@ -64,5 +64,11 @@
         }
     },
     "prefer-stable": true,
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sheadawson/silverstripe-timepickerfield"
+        }
+    ]
 }
