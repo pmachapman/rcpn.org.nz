@@ -46,6 +46,8 @@ SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
 UndefinedOffset\NoCaptcha\Forms\NocaptchaField:
     site_key: "YOUR_SITE_KEY" #Your site key (required)
     secret_key: "YOUR_SECRET_KEY" #Your secret key (required)
+    recaptcha_version: 3
+    minimum_score: 0.8
     verify_ssl: true #Allows you to disable php-curl's SSL peer verification by setting this to false (optional, defaults to true)
     default_theme: "light" #Default theme color (optional, light or dark, defaults to light)
     default_type: "image" #Default captcha type (optional, image or audio, defaults to image)

@@ -2,7 +2,7 @@
 
 namespace {
 
-	use SheaDawson\TimePickerField\TimePickerField;
+	use PMAChapman\TimePickerField\TimePickerField;
 	use SilverStripe\Forms\CheckboxField;
 	use SilverStripe\Forms\CheckboxSetField;
 	use SilverStripe\Forms\GridField\GridField;

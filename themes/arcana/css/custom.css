@@ -132,3 +132,9 @@ section#banner {
 .monthly .monthly-header-title a {
 	border-bottom: 1px solid #ccc !important;
 }
+
+.error {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: larger;
+}
